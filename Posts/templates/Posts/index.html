@@ -1,0 +1,190 @@
+{% extends 'Posts/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <section class="News">
+        <div class="content-section">
+            <div class="row">
+                {% for pt in post %}
+                    <div class="col-md-7 pd">
+                        <div class="bn1" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ pt.image.url }}')">
+                            <div class="info">
+                                <span class="category">{{ pt.category }}</span>
+                                <a href="{% url 'details' pt.pk %}">{{ pt.title }}</a>
+                                <span class="author">{{ pt.author }}</span> <br>
+                                <span class="date">{{ pt.date_created|date:"d F Y" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="col-md-5 pd">
+                    {% for sb in sub %}
+                        <div class="bn2" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ sb.image.url }}')">
+                            <div class="info">
+                                <span class="category">{{ sb.category }}</span>
+                                <a href="{% url 'details' sb.pk %}">{{ sb.title }}</a>
+                                <span class="author">{{ sb.author }}</span><br>
+                                <span class="date">{{ sb.date_created|date:"d F Y" }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+
+    <section class="categories">
+        <div class="content-container">
+            <!-- Lifestyle -->
+            <div class="row">
+                <div class="col-md-12 header">
+                    <h5>Lifestyle</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row row-cols-1 row-cols-md-4">
+                        {% for nw in news %}
+                            <div class="col mb-4">
+                                <div class="card h-70 glass">
+                                    <img src="{{ nw.image.url }}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ nw.category }}</h5>
+                                        <a href="{% url 'details' nw.pk %}" class="card-text">{{ nw.title }}</a>
+                                        <span class="author">{{ nw.author }}</span> <br>
+                                        <span class="date">{{nw.date_created|date:"d F Y"  }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-md-4 sidebar">
+                    <div class="ct glass">
+                        <div class="header">
+                            <h5>Categories</h5>
+                        </div>
+
+                        <div class="ct-side">
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Lifestyle</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ lifestyle }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Fashion</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ fashion }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Technology</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ tech }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Gaming</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ gaming }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Art</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ art }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Nature</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ nature }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Travel</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ travel }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Health</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ health }}</span>
+                                </div>
+                            </div>
+
+                            <div class="ctt">
+                                <div class="category">
+                                    <span>Food</span>
+                                </div>
+
+                                <div class="amount">
+                                    <span>{{ food }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="popular glass">
+                        <div class="header">
+                            <h5>Popular Posts</h5>
+                        </div>
+                        {% for pl in popular %}
+                            <div class="side">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="{{ pl.image.url }}">
+                                    </div>
+
+                                    <div class="col-md-8 info">
+                                        <span class="category">{{ pl.category }}</span><br>
+                                        <a href="{% url 'details' pl.pk %}">{{ pl.title }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'Posts/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="logout-page" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{% static 'Posts/images/bg.jpg' %}')">
+        <div class="logout-link ml-auto mr-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Logged Out Successfully</h2>
+                        <a href="{% url 'login' %}">Login Again</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+{% endblock %}
