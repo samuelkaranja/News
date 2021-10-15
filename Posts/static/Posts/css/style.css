@@ -541,10 +541,23 @@
     background-repeat: no-repeat;
 }
 
-.logout-page .logout-link{
-    position: absolute;
+.logout-page .log-msg{
+    /* position: absolute; */
+    margin-top: 100px;
     color: #ffffff;
     text-align: center;
+}
+
+.logout-page .log-msg h2{
+    margin-bottom: 30px;
+}
+
+.logout-page .log-msg a{
+    color: #ffffff;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
 }
 
 /* Footer */
@@ -556,7 +569,6 @@
     color: #ffffff;
     padding: 20px 0 0 0;
     text-align: center;
-    margin-top: 20px;
 }
 
 .footer ul{
@@ -587,6 +599,28 @@
 /* ................... Mobile Phone ............... */
 
 @media only screen and (max-width: 425px){
+    .navbar-dark .navbar-brand {
+        margin: 0px;
+    }
+
+    .navbar-expand-lg {
+        padding: 10px 35px !important;
+    }
+    
+    .navbar-dark .registration {
+        margin-left: 21px;
+    }
+    
+    .navbar-dark .usr {
+        margin-left: 21px;
+        display: block;
+    }
+
+    .navbar-dark .logout {
+        margin-left: 21px;
+        margin-top: 5px;
+    }
+
     .News .bn1 {
         height: 35vh;
     }
