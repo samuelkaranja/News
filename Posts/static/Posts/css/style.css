@@ -328,7 +328,7 @@
 .details .center-image .title{
     display: block;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .details .center-image .author, .details .center-image .date{
@@ -656,8 +656,12 @@
         margin: 10px 0;
     }
 
-    .categories .sidebar{
+    .categories .ct{
         display: none;
+    }
+
+    .categories .sidebar .popular{
+        margin-bottom: 20px;
     }
 }
 
