@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from . models import Post
 from django.contrib import messages
-from . forms import NewsletterForm, PostReplyForm
+from . forms import NewsletterForm, PostReplyForm, PostForm
 
 # Create your views here.
 
@@ -60,6 +60,18 @@ def details(request, pk):
         form = NewsletterForm()
         reply = PostReplyForm()
     return render(request, 'Posts/details.html', {'det': det, 'form':form, 'reply': reply})
+
+def createPost(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            title = form.cleaned_data['title']
+            form.save()
+            messages.success(request, f"{title} post created successfully!!")
+            return redirect("home")
+    else:
+        form = PostForm()
+    return render(request, 'Posts/CreatePost.html', {'form': form})
 
 # def Search(request):
 #     post_list = Post.objects.all()
