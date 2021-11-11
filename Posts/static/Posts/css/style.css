@@ -656,11 +656,15 @@
     }
 
     .details .description {
-        margin-top: 20px;
+        margin-top: 6px;
     }
 
     .detail_container {
         margin: 0 20px;
+    }
+
+    .details .description .info {
+        padding: 20px 0px;
     }
 
     .details .description .comment {
