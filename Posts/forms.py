@@ -1,7 +1,10 @@
 from django import forms
 from . models import Newsletter, PostReply, Post
+from ckeditor.widgets import CKEditorWidget
 
 class PostForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorWidget())
+
     class Meta:
         model = Post
         fields = '__all__'

@@ -1,6 +1,7 @@
 {% extends 'Posts/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% load widget_tweaks %}
 
 {% block content %}
     <section class="new-post">
@@ -15,8 +16,30 @@
                 <div class="col-md-7">
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-
-                        {{ form|crispy }}
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Title:</label>
+                            {% render_field form.title type="text" class="form-control" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Category:</label>
+                            {% render_field form.category class="form-control" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Image:</label>
+                            {% render_field form.image type="file" class="form-control-file" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Description:</label>
+                            {% render_field form.description class="form-control"  rows="5" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Author:</label>
+                            {% render_field form.author type="text" class="form-control" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Tag:</label>
+                            {% render_field form.tag class="form-control" %}
+                        </div>
                         <button type="submit" class="btn btn-block btn-success">Enter</button>
                     </form>
                 </div>

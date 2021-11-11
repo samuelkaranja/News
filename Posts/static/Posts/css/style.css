@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: 0;   
+    padding: 0;
 }
 
 .content-section{
@@ -610,6 +610,10 @@
 /* ................... Mobile Phone ............... */
 
 @media only screen and (max-width: 425px){
+    .glass{
+        box-shadow: none;
+    }
+
     .navbar-dark .navbar-brand {
         margin: 0px;
     }
@@ -673,6 +677,10 @@
 
     .categories .sidebar .popular{
         margin-bottom: 20px;
+    }
+
+    .categories .card .card-img, .card-img-top {
+        height: 30vh;
     }
 }
 
