@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from . models import Post
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from . forms import NewsletterForm, PostReplyForm, PostForm
 
 # Create your views here.
@@ -42,6 +43,7 @@ def Index(request):
 
     return render(request, 'Posts/index.html',context)
 
+@login_required(login_url="login")
 def details(request, pk):
     det = Post.objects.get(pk=pk)
     if request.method == 'POST':
@@ -72,6 +74,9 @@ def createPost(request):
     else:
         form = PostForm()
     return render(request, 'Posts/CreatePost.html', {'form': form})
+
+def About(request):
+    return render(request, 'Posts/about.html')
 
 # def Search(request):
 #     post_list = Post.objects.all()
