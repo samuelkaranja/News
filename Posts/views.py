@@ -68,7 +68,9 @@ def createPost(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             title = form.cleaned_data['title']
-            form.save()
+            obj = form.save(commit=False)
+            obj.author = request.user
+            obj.save()
             messages.success(request, f"{title} post created successfully!!")
             return redirect("home")
     else:

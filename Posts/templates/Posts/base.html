@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'Posts/css/style.css' %}">
+    <scipt src="{% static 'Posts/Js/script.js' %}"></script>
     <title>Blog Post</title>
   </head>
   <body>
@@ -29,10 +30,7 @@
                     <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
@@ -41,8 +39,8 @@
 
             {% if request.user.is_authenticated %}
                 <a href="{% url 'createPost' %}" class="create">Create a New Post</a>
-                <span class="usr">Welcome <a href="{% url 'profile' %}" class="profile_link">{{ request.user }}</a></span>
-                <a href="{% url 'logout' %}" class="btn btn-danger logout">Logout</a>
+                <span class="usr"><a href="{% url 'profile' %}" class="profile_link"><img class="rounded-circle z-depth-2" src="{{ user.profile.image.url }}"></a></span>
+                <a href="{% url 'logout' %}" class="logout">Logout</a>
             {% else %}
                 <div class="registration">
                     <a href="{% url 'register' %}" class="reg">Register</a> <span> / </span>

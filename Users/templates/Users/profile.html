@@ -9,13 +9,15 @@
                 <div class="col-md-5">
                     <h1>Profile Page</h1>
                     <div class="name">
-                        <img class="rounded-circle z-depth-2" src="{% static 'Posts/images/art.jpg' %}">
-                        <h2>Welcome {{ request.user }}</h2>
+                        <img class="rounded-circle z-depth-2" src="{{ user.profile.image.url }}">
+                        <h2>{{ user.username }}</h2>
+                        <p>{{ user.email }}</p>
                     </div>
 
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {{ form|crispy }}
+                        {{ u_form|crispy }}
+                        {{ p_form|crispy }}
                         <button type="submit" class="btn btn-block btn-success">Update Profile</button>
                     </form>
                 </div>

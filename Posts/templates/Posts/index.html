@@ -12,8 +12,8 @@
                             <div class="info">
                                 <span class="category">{{ pt.category }}</span>
                                 <a href="{% url 'details' pt.pk %}">{{ pt.title }}</a>
-                                <span class="author">{{ pt.author }}</span> <br>
-                                <span class="date">{{ pt.date_created|date:"d F Y" }}</span>
+                                <span class="author">Author: {{ pt.author }}</span> <br>
+                                <span class="date">Date Posted: {{ pt.date_created|date:"d F Y" }}</span>
                             </div>
                         </div>
                     </div>
@@ -25,8 +25,8 @@
                             <div class="info">
                                 <span class="category">{{ sb.category }}</span>
                                 <a href="{% url 'details' sb.pk %}">{{ sb.title }}</a>
-                                <span class="author">{{ sb.author }}</span><br>
-                                <span class="date">{{ sb.date_created|date:"d F Y" }}</span>
+                                <span class="author">Author: {{ sb.author }}</span><br>
+                                <span class="date">Date Posted: {{ sb.date_created|date:"d F Y" }}</span>
                             </div>
                         </div>
                     {% endfor %}    
@@ -42,7 +42,7 @@
             <!-- Lifestyle -->
             <div class="row">
                 <div class="col-md-12 header">
-                    <h5>Lifestyle</h5>
+                    <h5>Latest Posts</h5>
                 </div>
             </div>
 
@@ -91,6 +91,7 @@
                                     <span>{{ fashion }}</span>
                                 </div>
                             </div>
+                            
 
                             <div class="ctt">
                                 <div class="category">

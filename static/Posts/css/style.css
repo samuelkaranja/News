@@ -1,0 +1,703 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content-section{
+    margin: 0 20px;
+}
+
+.content-container{
+    margin: 0 40px;
+}
+
+.pd{
+    padding: 5px !important;
+}
+
+.mr{
+    margin-right: 0 !important;
+}
+
+/* NavBar */
+
+.navbar-expand-lg{
+    padding: 10px 50px !important;
+}
+
+.navbar-dark .navbar-brand{
+    font-size: 22px !important;
+    font-weight: bold;
+    font-family: cursive;
+    color: orange;
+    margin: 0 40px;
+}
+
+.navbar-dark .navbar-brand:hover{
+    color: orange;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.navbar-dark .registration {
+    margin-left: 50px;
+}
+
+.navbar-dark .registration a{
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.navbar-dark .registration span{
+    color: #ffffff;
+}
+
+.navbar-dark .usr{
+    color: #ffffff;
+    margin-left: 30px;
+}
+
+.navbar-dark .profile_link{
+    padding-left: 2px;
+    padding-right: 40px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.navbar-dark .create{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.navbar-dark .logout{
+    color: #ffffff;
+}
+
+/* News */
+
+.News{
+    margin-top: 5px;
+}
+
+.News .bn1{
+    position: relative;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.News .bn1 .info{
+    position: absolute;
+    color: #ffffff;
+    left: 20px;
+    bottom: 20px;
+}
+
+.News .bn1 .info .category{
+    text-transform: uppercase;
+    color: orange;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.News .bn1 .info a{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.News .bn1 .info .author {
+    font-weight: bold;
+}
+
+.News .bn1 .info .date{
+    font-weight: 500;
+}
+
+.News .bn2{
+    position: relative;
+    height: 30vh;
+    margin-bottom: 1px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.News .bn2 .info{
+    position: absolute;
+    color: #ffffff;
+    left: 20px;
+    bottom: 10px;
+}
+
+.News .bn2 .info .category{
+    text-transform: uppercase;
+    color: orange;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.News .bn2 .info a{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.News .bn2 .info .author {
+    font-weight: bold;
+}
+
+.News .bn2 .info .date{
+    font-weight: 400;
+}
+
+/* Categories */
+
+.categories{
+    margin-top: 20px;
+}
+
+.categories .header h5{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.categories .header h5::after{
+    content: "";
+    background-color: #e8eaed;
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    top: -2px;
+    left: 15px;
+}
+
+.glass{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.categories .card{
+    border: none !important;
+}
+
+.categories .card .card-img, .card-img-top {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    height: 20vh;
+}
+
+.categories .card-body{
+    padding: 10px !important;
+}
+
+/* .categories .card-body{
+    padding: 15px 20px 5px 0 !important;
+} */
+
+.categories .card-body .card-title{
+    color: orange;
+    text-transform: uppercase !important;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.categories .card-body a{
+    display: block;
+    color: #000000;
+    font-weight: 700;
+    font-size: 17px;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.categories .card-body a:hover{
+    color: orange;
+}
+
+.categories .card-body .author{
+    font-weight:700;
+    color: #97989b;
+}
+
+.categories .card-body .date{
+    color: #97989b;
+    font-weight: 500;
+}
+
+.categories .sidebar .ct{
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.categories .sidebar .ct-side .ctt{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.categories .sidebar .ct-side .ctt .category{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.categories .sidebar .ct-side .ctt .amount{
+    color: #97989b;
+    font-weight: 500;
+}
+
+.categories .sidebar .side{
+    margin-bottom: 25px;
+}
+
+.categories .sidebar .side img{
+    width: 165px;
+    object-fit: cover;
+}
+
+.categories .sidebar .side .info{
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.categories .sidebar .side .info .category{
+    color: orange;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.categories .sidebar .side .info a{
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.categories .sidebar .popular{
+    padding: 20px 10px;
+}
+
+/* ............. Details Page............... */
+
+.detail_container{
+    margin: 0 100px;
+}
+
+.details .center-image{
+    position: relative;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.details .center-image .info{
+    position: absolute;
+    color: #ffffff;
+    left: 150px;
+    bottom: 100px;
+    margin-right: 600px;
+}
+
+.details .center-image .category{
+    display: block;
+    color: orange;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.details .center-image .title{
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.details .center-image .author, .details .center-image .date{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.details .description{
+    margin-top: 30px;
+}
+
+.details .description .info{
+    padding: 20px 25px;
+}
+
+.details .description .comment{
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.details .description .comment h5{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.details .header h5{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.details .header h5::after{
+    content: "";
+    background-color: #e8eaed;
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    top: -2px;
+    left: 15px;
+}
+
+.details .frm{
+    padding-bottom: 30px;
+}
+
+.details .frm .email{
+    padding: 8px 80px 8px 12px !important;
+    border: 2px solid #e8eaed !important;
+    border-radius: 5px;
+    display: block;
+}
+
+.details .frm .bt{
+    background-color: #28a745;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 3px;
+}
+
+.details .frm input::placeholder{
+    font-weight: 500;
+}
+
+.details .social .facebook{
+    background-color: #225b99;
+    text-align: center;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.details .social .twitter{
+    background-color: #00adf2;
+    text-align: center;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.details .social .instagram{
+    background-color: #dc4d2d;
+    text-align: center;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.details .social .fa{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.details .social .followers{
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+/*.............. Create Post ................*/
+
+.new-post{
+    padding: 20px 0;
+}
+
+/*............... Register Page ................*/
+
+.register, .login{
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.register .reg-frm, .login .log-frm{
+    color: #ffffff;
+    padding-top: 50px;
+}
+
+.register .reg-frm h3, .login .log-frm h3{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.register .reg-frm .frm .form-group, .login .log-frm .frm .form-group{
+    margin-bottom: 30px !important;
+}
+
+.register .reg-frm .frm .fa, .login .log-frm .frm .fa{
+    position: absolute;
+    margin-left: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.register .reg-frm .frm .input, .login .log-frm .frm .input{
+    border-radius: 50px;
+    border: none;
+    padding: 25px 0 25px 45px;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.register .reg-frm .frm .input::placeholder, .login .log-frm .frm .input::placeholder{
+    color: #ffffff;
+}
+
+.register .reg-frm .frm .bt, .login .log-frm .frm .bt{
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    color: #ffffff;
+    text-transform: uppercase;
+    /* font-weight: 500;
+    font-size: 17px; */
+}
+
+.register .reg-frm .log-link{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login .log-frm .rf-link{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/*........... Profile Page ............*/
+
+.profile{
+    padding: 20px 0;
+}
+
+.profile h1{
+    margin-bottom: 20px;
+}
+
+.profile .name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile img{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile h2{
+    margin-top: 55px;
+    /* margin-right: 60px; */
+}
+
+/*............. Logout Page .............*/
+
+.logout-page{
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logout-page .log-msg{
+    /* position: absolute; */
+    margin-top: 100px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.logout-page .log-msg h2{
+    margin-bottom: 30px;
+}
+
+.logout-page .log-msg a{
+    color: #ffffff;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Footer */
+
+.footer{
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+.footer ul{
+    list-style-type: none;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.footer ul li a{
+    color: #ffffff;
+}
+
+.footer .social ul li{
+    padding: 0 20px;
+}
+
+.footer .fa{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*................... Media Queires ...................*/
+
+/* ................... Mobile Phone ............... */
+
+@media only screen and (max-width: 425px){
+    .glass{
+        box-shadow: none;
+    }
+
+    .navbar-dark .navbar-brand {
+        margin: 0px;
+    }
+
+    .navbar-expand-lg {
+        padding: 10px 35px !important;
+    }
+    
+    .navbar-dark .registration {
+        margin-left: 21px;
+    }
+    
+    .navbar-dark .usr {
+        margin-left: 21px;
+        display: block;
+    }
+
+    .navbar-dark .logout {
+        margin-left: 21px;
+        margin-top: 5px;
+    }
+
+    .News .bn1 {
+        height: 35vh;
+    }
+
+    .News .bn2 {
+        height: 35vh;
+        margin-bottom: 10px;
+    }
+
+    .details .center-image {
+        height: 45vh;
+    }
+
+    .details .center-image .info {
+        left: 35px;
+        bottom: 67px;
+        margin-right: 10px;
+    }
+
+    .details .description {
+        margin-top: 6px;
+    }
+
+    .detail_container {
+        margin: 0 20px;
+    }
+
+    .details .description .info {
+        padding: 20px 0px;
+    }
+
+    .details .description .comment {
+        margin-top: 40px;
+    }
+
+    .details .social .facebook, .details .social .twitter, .details .social .instagram {
+        margin: 10px 0;
+    }
+
+    .categories .ct{
+        display: none;
+    }
+
+    .categories .sidebar .popular{
+        margin-bottom: 20px;
+    }
+
+    .categories .card .card-img, .card-img-top {
+        height: 30vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
