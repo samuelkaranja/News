@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from . models import Post
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from . forms import NewsletterForm, PostReplyForm, PostForm
+from . forms import NewsletterForm, CommentForm, PostForm
 
 # Create your views here.
 
@@ -53,14 +53,14 @@ def details(request, pk):
             messages.success(request, "You have Subscribed to our Newsletter successfully!")
             return redirect('home')
 
-        reply = PostReplyForm(request.POST)
+        reply = CommentForm(request.POST)
         if reply.is_valid():
             reply.save()
-            messages.success(request, "Post Reply sent successfully!")
+            # messages.success(request, "Post Reply sent successfully!")
             return redirect('home')
     else:
         form = NewsletterForm()
-        reply = PostReplyForm()
+        reply = CommentForm()
     return render(request, 'Posts/details.html', {'det': det, 'form':form, 'reply': reply})
 
 def createPost(request):

@@ -170,10 +170,10 @@
     font-weight: 400;
 }
 
-/* Categories */
+/*.......... Categories ............*/
 
 .categories{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .categories .header h5{
@@ -210,16 +210,12 @@
 .categories .card .card-img, .card-img-top {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
-    height: 20vh;
+    height: 24vh;
 }
 
 .categories .card-body{
     padding: 10px !important;
 }
-
-/* .categories .card-body{
-    padding: 15px 20px 5px 0 !important;
-} */
 
 .categories .card-body .card-title{
     color: orange;
@@ -304,6 +300,45 @@
 .categories .sidebar .popular{
     padding: 20px 10px;
 }
+
+/*............. Categories Scroll Bar ................*/
+
+.ct-scroll{
+    margin-bottom: 5px;
+}
+
+.match-scroll-navbar{
+	/* overflow-x: scroll; */
+	overflow-y: hidden;
+	white-space: nowrap;
+	/* text-align: center; */
+	/* border: 1px solid #d8d8d8; */
+}
+
+.match-scroll-navbar ul{
+	padding: 0;
+	margin: 0;
+}
+
+.match-scroll-navbar ul li{
+	display: inline-block;
+	padding: 10px;
+}
+
+.match-scroll-navbar h4{
+	font-size: 17px;
+	font-weight: 500;
+}
+
+/* .match-scroll-navbar ul li a{
+	color: #000;
+	text-decoration: none;
+	font-weight: 600;
+} */
+
+/* .match-scroll-navbar ul li:hover{
+	background-color: #1DC57D;
+} */
 
 /* ............. Details Page............... */
 
@@ -445,6 +480,16 @@
 
 .new-post{
     padding: 20px 0;
+}
+
+.new-post .crt h2{
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.new-post .crt .form-control{
+    box-shadow: none !important;
 }
 
 /*............... Register Page ................*/

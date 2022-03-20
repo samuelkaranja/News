@@ -39,6 +39,45 @@
 
     <section class="categories">
         <div class="content-container">
+            <div class="ct-scroll">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="match-scroll-navbar">
+                            <nav class="nv">
+                                <ul>
+                                    <li>
+                                        <h4>Lifestyle ({{ lifestyle }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Fashion ({{ fashion }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Technology ({{ tech }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Gaming ({{ gaming }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Art ({{ art }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Nature ({{ nature }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Travel ({{ travel }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Health ({{ health }})</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Food ({{ food }})</h4>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Lifestyle -->
             <div class="row">
                 <div class="col-md-12 header">
@@ -47,16 +86,16 @@
             </div>
 
             <div class="row">
-                <div class="col-md-8">
-                    <div class="row row-cols-1 row-cols-md-4">
+                <div class="col-md-12">
+                    <div class="row row-cols-1 row-col-md-4">
                         {% for nw in news %}
-                            <div class="col mb-4">
+                            <div class="col-md-4 mb-4">
                                 <div class="card h-70 glass">
                                     <img src="{{ nw.image.url }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ nw.category }}</h5>
                                         <a href="{% url 'details' nw.pk %}" class="card-text">{{ nw.title }}</a>
-                                        <span class="author">{{ nw.author }}</span> <br>
+                                        <span class="author">Author: {{ nw.author }}</span> <br>
                                         <span class="date">{{nw.date_created|date:"d F Y"  }}</span>
                                     </div>
                                 </div>
@@ -65,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 sidebar">
+                {% comment %} <div class="col-md-4 sidebar">
                     <div class="ct glass">
                         <div class="header">
                             <h5>Categories</h5>
@@ -184,7 +223,7 @@
                             </div>
                         {% endfor %}
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
     </section>

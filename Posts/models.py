@@ -1,7 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.conf import settings
-
 # Create your models here.
 
 CATEGORY_CHOICES = (
@@ -40,13 +39,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class PostReply(models.Model):
-    firstName = models.CharField(max_length=200)
-    lastName = models.CharField(max_length=200)
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name="comments", null=True, blank=True, on_delete=models.CASCADE)
+    name = models.CharField(max_length=250)
     message = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.firstName
+        return '%s - %s' % (self.post.title, self.name)
 
 class Newsletter(models.Model):
     email = models.EmailField()

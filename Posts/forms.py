@@ -1,5 +1,5 @@
 from django import forms
-from . models import Newsletter, PostReply, Post
+from . models import Newsletter, Comment, Post
 from ckeditor.widgets import CKEditorWidget
 
 class PostForm(forms.ModelForm):
@@ -15,7 +15,7 @@ class NewsletterForm(forms.ModelForm):
         model = Newsletter
         fields = '__all__'
 
-class PostReplyForm(forms.ModelForm):
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = PostReply
-        fields = '__all__'
+        model = Comment
+        fields = ['name', 'message']

@@ -24,26 +24,37 @@
                             <p>{{ det.description|safe }}</p>
                         </div>
 
-                        <div class="comment glass">
-                            <h5>Leave a reply</h5>
-                            <form method="POST">
-                                {% csrf_token %}
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="">First Name</label>
-                                        {% render_field reply.firstName type="text" class="form-control" placeholder="Jane" %}
+                        <div class="comment">
+                            <h5>Comments......</h5>
+                            {% if not det.comments.all %}
+                                No Comments yet.....
+                            {% else %}
+                                {% for comment in det.comments.all %}
+                                    <div class="cnt" style="">
+                                        <span><b>{{ comment.name }}</b></span> -
+                                        <span>Posted: <b>{{ comment.date_added }}</b></span>
+                                        <p style="mt-5">{{ comment.message }}</p>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="">Last Name</label>
-                                        {% render_field reply.lastName type="text" class="form-control" placeholder="Doe" %}
+                                {% endfor %}
+                            {% endif %}
+                            <br><br>
+                            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#comment">Add A Comment</button>
+                            <div id="comment" class="collapse">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="">Name</label>
+                                            {% render_field reply.name type="text" class="form-control" placeholder="Doe" %}
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Message</label>
-                                    {% render_field reply.message class="form-control" rows="7" placeholder="Enter Message Here.........." %}
-                                </div>
-                                <button type="submit" class="btn btn-block btn-success">Send</button>
-                            </form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Message</label>
+                                        {% render_field reply.message class="form-control" rows="7" placeholder="Enter Message Here.........." %}
+                                    </div>
+                                    <button type="submit" class="btn btn-block btn-success">Send</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
