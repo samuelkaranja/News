@@ -4,6 +4,7 @@ from django.conf import settings
 # Create your models here.
 
 CATEGORY_CHOICES = (
+    ("Breaking News", "Breaking News"),
     ("Lifestyle", "Lifestyle"),
     ("Fashion", "Fashion"),
     ("Technology", "Technology"),
@@ -35,6 +36,9 @@ class Post(models.Model):
     description = RichTextField()
     date_created = models.DateTimeField(auto_now_add=True)
     tag = models.CharField(max_length=200, choices = TAG_CHOICES, blank=True)
+
+    class Meta:
+        ordering = ['-date_created']
 
     def __str__(self):
         return self.title

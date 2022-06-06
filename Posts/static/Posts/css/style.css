@@ -85,95 +85,49 @@
     color: #ffffff;
 }
 
-/* News */
+/* ........... Carousel............ */
 
-.News{
-    margin-top: 5px;
-}
-
-.News .bn1{
-    position: relative;
+/* .move .carousel{
     height: 60vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+} */
+
+.move .carousel .carousel-item:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  }
+
+.move .carousel .carousel-item img {
+    object-fit: cover;
+    height: 65vh;
 }
 
-.News .bn1 .info{
-    position: absolute;
-    color: #ffffff;
-    left: 20px;
-    bottom: 20px;
+.move .carousel .carousel-item .carousel-caption{
+    text-align: left !important;
+    width: 50%;
+    margin-bottom: 30px;
 }
 
-.News .bn1 .info .category{
-    text-transform: uppercase;
-    color: orange;
-    font-weight: 500;
-    font-size: 17px;
-}
-
-.News .bn1 .info a{
-    display: block;
-    color: #ffffff;
+.move .carousel .carousel-item .carousel-caption a{
     text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 5px 0;
-}
-
-.News .bn1 .info .author {
+    color: #fff;
+    font-size: 41px;
     font-weight: bold;
 }
 
-.News .bn1 .info .date{
-    font-weight: 500;
-}
-
-.News .bn2{
-    position: relative;
-    height: 30vh;
-    margin-bottom: 1px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.News .bn2 .info{
-    position: absolute;
-    color: #ffffff;
-    left: 20px;
-    bottom: 10px;
-}
-
-.News .bn2 .info .category{
-    text-transform: uppercase;
-    color: orange;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-.News .bn2 .info a{
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 5px 0;
-}
-
-.News .bn2 .info .author {
-    font-weight: bold;
-}
-
-.News .bn2 .info .date{
-    font-weight: 400;
+.move .carousel .carousel-item p{
+    font-size: 18px;
 }
 
 /*.......... Categories ............*/
 
 .categories{
-    margin-top: 10px;
+    margin: 15px 0;
 }
 
 .categories .header h5{
@@ -204,13 +158,13 @@
 }
 
 .categories .card{
-    border: none !important;
+    width: 15rem;
 }
 
 .categories .card .card-img, .card-img-top {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
-    height: 24vh;
+    height: 22vh;
 }
 
 .categories .card-body{
@@ -220,31 +174,22 @@
 .categories .card-body .card-title{
     color: orange;
     text-transform: uppercase !important;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
+    margin-bottom: 4px !important;
 }
 
 .categories .card-body a{
     display: block;
     color: #000000;
     font-weight: 700;
-    font-size: 17px;
-    padding-bottom: 10px;
-    text-decoration: none;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 8px;
 }
 
 .categories .card-body a:hover{
     color: orange;
-}
-
-.categories .card-body .author{
-    font-weight:700;
-    color: #97989b;
-}
-
-.categories .card-body .date{
-    color: #97989b;
-    font-weight: 500;
 }
 
 .categories .sidebar .ct{
@@ -301,44 +246,78 @@
     padding: 20px 10px;
 }
 
+/*......... Category Top Post ............*/
+
+.categories .posts{
+    width: 90%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.categories .posts h5{
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.categories .posts ol{
+    list-style-type: none;
+}
+
+.categories .posts ol li{
+    padding-bottom: 7px;
+}
+
+.categories .posts ol li a{
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.categories .posts ol li span{
+    color: grey;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
 /*............. Categories Scroll Bar ................*/
 
 .ct-scroll{
-    margin-bottom: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 5px 12px;
 }
 
-.match-scroll-navbar{
-	/* overflow-x: scroll; */
-	overflow-y: hidden;
-	white-space: nowrap;
-	/* text-align: center; */
-	/* border: 1px solid #d8d8d8; */
+.match-scroll-navbar .nv h4{
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .match-scroll-navbar ul{
 	padding: 0;
 	margin: 0;
+    list-style-type: none;
 }
 
 .match-scroll-navbar ul li{
-	display: inline-block;
-	padding: 10px;
+	padding: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.match-scroll-navbar ul li h4{
+    font-size: 15px;
+}
+
+.match-scroll-navbar ul li span{
+    font-weight: 600;
 }
 
 .match-scroll-navbar h4{
 	font-size: 17px;
 	font-weight: 500;
 }
-
-/* .match-scroll-navbar ul li a{
-	color: #000;
-	text-decoration: none;
-	font-weight: 600;
-} */
-
-/* .match-scroll-navbar ul li:hover{
-	background-color: #1DC57D;
-} */
 
 /* ............. Details Page............... */
 

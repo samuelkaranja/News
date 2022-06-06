@@ -11,6 +11,8 @@ def Index(request):
     sub = Post.objects.filter(tag='SubContent')
     popular = Post.objects.filter(tag="Popular")
     news = Post.objects.filter(tag="News")
+    top = Post.objects.all()[:4]
+    post_count = top.count()
 
     # Categories
 
@@ -39,6 +41,9 @@ def Index(request):
         'food': food,
         'nature': nature,
         'gaming': gaming,
+
+        'top': top,
+        'post_count': post_count,
     }   
 
     return render(request, 'Posts/index.html',context)
