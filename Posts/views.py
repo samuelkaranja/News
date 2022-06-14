@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from . models import Post
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from . forms import NewsletterForm, CommentForm, PostForm
+from . forms import NewsletterForm, CommentForm, PostForm, ContactForm
 
 # Create your views here.
 
@@ -84,6 +84,18 @@ def createPost(request):
 
 def About(request):
     return render(request, 'Posts/about.html')
+
+@login_required(login_url="login")
+def Contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Message sent successfully!!!')
+            return redirect('contact')
+    else:
+        form = ContactForm()
+    return render(request, 'Posts/contact.html', {'form': form})
 
 # def Search(request):
 #     post_list = Post.objects.all()
